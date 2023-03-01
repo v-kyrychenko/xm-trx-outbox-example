@@ -5,4 +5,4 @@ More details about pattern: Transactional outbox could be found by:
 
 ## Event flow diagram
 
-<img src="image/outbox.png">
+<img src="image/trx-outbox.png">
