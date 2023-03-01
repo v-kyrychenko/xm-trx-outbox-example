@@ -1,0 +1,13 @@
+tasks:
+  - key: domain-events
+    typeKey: PROCESS_DOMAIN_EVENTS
+    stateKey:
+    name: "Process domain events from outbox table"
+    scheduleType: "CRON"
+    channelType: "QUEUE"
+    endDate:
+    startDate:
+    delay:
+    cronExpression: "0 0/5 * * * ?" # every 5 minutes
+    data: |
+    targetMs: entity

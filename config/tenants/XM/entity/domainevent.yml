@@ -1,0 +1,5 @@
+enabled: true
+sources:
+  LEP: # configuration for all domain event from source LEP
+    enabled: true
+    transport: outboxTransport # transport store event to outbox table for further processing

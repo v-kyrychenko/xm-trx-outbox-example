@@ -1,0 +1,9 @@
+---
+topics:
+  - key: NOTIFICATION.HANDLER
+    groupId: main-processor
+    typeKey: notification_handler
+    topicName: xm_notification
+    retriesCount: 1
+    backOffPeriod: 10000
+    deadLetterQueue: xm_common_errors
