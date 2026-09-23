@@ -18,16 +18,16 @@ String json = lepContext.inArgs.topicMessage
 
 Map notification = new ObjectMapper().readValue(json, Map.class)
 
-log.info('### NOTIFICATION-HANDLER:start: {}', notification.id)
+log.info('### EVENT-HANDLER:start: {}', notification.id)
 
 try {
     msEntityService.setEventProcessed(notification.id)
     sagaService.createNewSaga(buildTransaction("EVENT-PROCESSING-SAGA", notification))
 } catch (Exception ex) {
-    log.warn("Error during notification handling:{}", notification, ex)
+    log.warn("Error during event handling:{}", notification, ex)
 }
 
-log.info('### NOTIFICATION-HANDLER:stop: time = {} ms', start.getTime())
+log.info('### EVENT-HANDLER:stop: time = {} ms', start.getTime())
 return [:]
 
 private static SagaTransaction buildTransaction(String typeKey, Map context) {

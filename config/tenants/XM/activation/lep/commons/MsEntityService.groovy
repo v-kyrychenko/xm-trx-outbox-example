@@ -10,6 +10,6 @@ class MsEntityService {
     }
 
     void setEventProcessed(def eventId){
-        //logic for calling entity function PUT {{host}}/entity/api/functions/domainevents/<eventID>
+        //logic for calling entity function PUT {{host}}/entity/api/functions/v1/events/{eventId}/processed
     }
 }

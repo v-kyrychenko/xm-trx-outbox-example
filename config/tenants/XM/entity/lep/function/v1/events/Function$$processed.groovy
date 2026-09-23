@@ -1,4 +1,4 @@
-package ROOT0CORE.entity.lep.function.domainevents
+package ROOT0CORE.entity.lep.function.v1.events
 
 import XM.entity.lep.commons.DomainEventsService
 import com.icthh.xm.commons.exceptions.BusinessException
@@ -13,5 +13,5 @@ switch (requestMethod) {
     case HttpMethod.PUT.name():
         domainEventsService.setEventProcessed(eventId)
         return [:]
-    default: throw new BusinessException("error.api.domainevents", "Unsupported http method $requestMethod")
+    default: throw new BusinessException("error.api.events", "Unsupported http method $requestMethod")
 }

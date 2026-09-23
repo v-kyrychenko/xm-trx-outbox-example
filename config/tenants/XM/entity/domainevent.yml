@@ -1,5 +1,12 @@
 enabled: true
 sources:
-  LEP: # configuration for all domain event from source LEP
+  lep: # configuration for all domain event from source LEP
     enabled: true
+    type: db
     transport: outboxTransport # transport store event to outbox table for further processing
+  db: # Source "db": DatabaseSourceInterceptor publishes here when a Hibernate row is created, updated or deleted
+    enabled: true
+    type: db
+    transport: syncKafkaTransport # Sends the event to Kafka topic event.<tenant>.db once the DB transaction completes
+    filter:
+      key: default_db_filter # Resolves the LEP DatabaseFilter$$default_db_filter.groovy

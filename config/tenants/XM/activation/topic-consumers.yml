@@ -1,9 +1,10 @@
 ---
 topics:
-  - key: NOTIFICATION.HANDLER
-    groupId: main-processor
-    typeKey: notification_handler
-    topicName: xm_notification
+  - key: DOMAIN.EVENT.HANDLER
+    groupId: core-processor
+    typeKey: domain_event_handler
+    topicName: event.xm.db
     retriesCount: 1
     backOffPeriod: 10000
     deadLetterQueue: xm_common_errors
+    logBody: false

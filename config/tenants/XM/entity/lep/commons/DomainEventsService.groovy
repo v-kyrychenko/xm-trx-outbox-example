@@ -7,12 +7,14 @@ import com.icthh.xm.commons.domainevent.domain.DomainEventPayload
 import com.icthh.xm.commons.domainevent.outbox.domain.RecordStatus
 import com.icthh.xm.commons.domainevent.outbox.service.OutboxTransportService
 
+import static com.icthh.xm.commons.domainevent.domain.enums.LEP
+
 @Slf4j
 class DomainEventsService {
 
-    EventPublisher eventPublisher
-    DomainEventFactory domainEventFactory
-    OutboxTransportService outboxTransportService
+    private EventPublisher eventPublisher
+    private DomainEventFactory domainEventFactory
+    private OutboxTransportService outboxTransportService
 
     DomainEventsService(def lepContext) {
         this.outboxTransportService = lepContext.outboxTransportService
@@ -28,7 +30,7 @@ class DomainEventsService {
                         input.typeKey,      //aggregation type - type of the external entity
                         new DomainEventPayload(input.payload)) //raw event payload
 
-        eventPublisher.publish(LEP.name(), event)
+        eventPublisher.publish(LEP.getCode(), event)
     }
 
     void setEventProcessed(String eventId) {

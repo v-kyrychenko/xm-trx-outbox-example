@@ -1,0 +1,24 @@
+---
+types:
+  - key: RESOURCE.XM-TENANT
+    name: { en: "Tenant" }
+    isApp: false
+    isAbstract: false
+    icon: web
+    functions:
+      - key: v1/events/submit
+        path: v1/events
+        name: { en: "Submit new event" }
+        withEntityId: false
+        onlyData: true
+        isShowFormWithoutData: true
+        allowedStateKeys:
+          - NONE
+      - key: v1/events/processed
+        path: v1/events/{eventId}/processed
+        name: { en: "Processed" }
+        withEntityId: false
+        onlyData: true
+        isShowFormWithoutData: true
+        allowedStateKeys:
+          - NONE

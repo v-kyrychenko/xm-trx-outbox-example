@@ -1,6 +1,0 @@
-commons:
-  paging:
-    defaultPage: 0
-    defaultSize: 1000
-  notification:
-    defaultChannel: xm_notification
