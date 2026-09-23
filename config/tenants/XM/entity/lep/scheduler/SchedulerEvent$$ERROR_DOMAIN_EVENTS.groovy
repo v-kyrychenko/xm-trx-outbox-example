@@ -1,4 +1,4 @@
-package ROOT0CORE.entity.lep.scheduler
+package XM.entity.lep.scheduler
 
 import com.icthh.xm.commons.domainevent.outbox.domain.Outbox
 import com.icthh.xm.commons.domainevent.outbox.domain.RecordStatus

@@ -1,4 +1,4 @@
-package ROOT0CORE.entity.lep.function.v1.events
+package XM.entity.lep.function.v1.events
 
 import XM.entity.lep.commons.DomainEventsService
 import com.icthh.xm.commons.exceptions.BusinessException

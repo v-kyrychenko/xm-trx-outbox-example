@@ -1,4 +1,4 @@
-package ROOT0CORE.entity.lep.domainevent.db.filter
+package XM.entity.lep.domainevent.db.filter
 
 import com.icthh.xm.commons.domainevent.db.domain.JpaEntityContext
 import com.icthh.xm.commons.domainevent.domain.enums.DefaultDomainEventOperation
